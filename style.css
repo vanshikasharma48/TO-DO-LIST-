@@ -24,6 +24,7 @@ h1 {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap; 
 }
 
 input {
@@ -40,6 +41,7 @@ button {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  white-space: nowrap; 
 }
 
 ul {
@@ -54,10 +56,13 @@ li {
   margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap; 
 }
 
 li span {
   flex: 1;
+  word-break: break-word; 
 }
 
 .delete-btn {
@@ -67,4 +72,15 @@ li span {
   padding: 5px 8px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
 }
